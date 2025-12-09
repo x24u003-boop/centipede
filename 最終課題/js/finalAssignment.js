@@ -85,7 +85,7 @@ export function loop(now) {
             init(stageCount + 8, 1, 400);
         } else if (stageCount <=5) {
             init(stageCount + 14, 1, 500);
-        } else {
+        } else if(stageCount>=10){
             init(35, 1, 700);
         }
         startLoop(startButton, lastButton);
@@ -151,5 +151,6 @@ function stage() {
 export function lastStage() {
     stageCount = 10;
 }
+
 
 
