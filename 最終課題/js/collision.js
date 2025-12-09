@@ -174,7 +174,7 @@ export function collisionExecute(hits) {
             } else if (hitB instanceof Flea) {
                 clearObjects(hitA);
                 clearDraw(hitA.x, hitA.y, hitA.w, hitA.h);
-                if (hitB.health == 1) {
+                if (hitB.health == 0) {
                     score(hitB);
                     clearDraw(hitB.x, hitB.y, hitB.w, hitB.h);
                     clearObjects(hitB);
@@ -388,4 +388,5 @@ function collisionBullet(newX, newY, oldX, oldY, box) {
     // tEnter <= tExit → 衝突
     return tEnter <= tExit && tEnter >= 0 && tEnter <= 1;
 }
+
 
