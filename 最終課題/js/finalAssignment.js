@@ -83,7 +83,7 @@ export function loop(now) {
             init(8, 1, 400);
         } else if (stageCount < 3) {
             init(stageCount + 8, 1, 400);
-        } else if (stageCount <=5) {
+        } else if (stageCount <=6) {
             init(stageCount + 14, 1, 500);
         } else if(stageCount>=10){
             init(35, 1, 700);
@@ -151,6 +151,7 @@ function stage() {
 export function lastStage() {
     stageCount = 10;
 }
+
 
 
 
