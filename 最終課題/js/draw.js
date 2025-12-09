@@ -73,7 +73,8 @@ export async function loadImages(map) {
         startLoop(startButton, lastButton);
     });
     resetButton.addEventListener("click", function () {
-        
+        startButton.disabled = false;
+    lastButton.disabled = false;
         stopLoop(startButton, lastButton);
         clearDraw(0, 0, 800, 700);
         clearPlayer();
@@ -85,4 +86,5 @@ export async function loadImages(map) {
         lastStage();
         startLoop(startButton, lastButton);
     });
+
 })();
