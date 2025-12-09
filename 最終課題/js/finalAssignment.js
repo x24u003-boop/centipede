@@ -49,8 +49,7 @@ export function startLoop(startButton, lastButton) {
 }
 export function stopLoop(startButton, lastButton) {
     running = false;
-    startButton.disabled = false;
-    lastButton.disabled = false;
+    
     if (reqId !== null) {
 
         cancelAnimationFrame(reqId);
@@ -151,3 +150,4 @@ function stage() {
 export function lastStage() {
     stageCount = 10;
 }
+
