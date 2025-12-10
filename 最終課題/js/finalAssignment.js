@@ -57,11 +57,6 @@ export function stopLoop(startButton, lastButton) {
         cancelAnimationFrame(reqId);
         reqId = null;
     }
-    if ((stageCount == 4) || (stageCount == 14)) {
-        clearDraw(0, 0, 800, 700);
-        allClearObjects();
-        alert("ゲームクリア");
-    }
 }
 export function loop(now) {
     if (running == false) {
@@ -152,4 +147,5 @@ function stage() {
 export function lastStage() {
     stageCount = 10;
 }
+
 
