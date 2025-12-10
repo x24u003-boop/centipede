@@ -10,16 +10,12 @@ import { scorpionTimer, clearScorpion } from "./scorpion.js";
 
 
 function init(size, num, position) {
-    clearDraw(0, 0, 800, 660);
-    let mushrooms=countMushroom(objects);
-    allClearObjects();
     if ((stageCount == 0) || (stageCount == 10)) {
         MushroomInit(15, objects);
-    } else {
-        MushroomInit(mushrooms, objects);
+        addPlayer();
     }
 
-    addPlayer();
+    
     stage();
     stageCount++;
 
@@ -156,3 +152,4 @@ function stage() {
 export function lastStage() {
     stageCount = 10;
 }
+
