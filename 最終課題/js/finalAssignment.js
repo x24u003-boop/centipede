@@ -152,6 +152,6 @@ export function clearX() {
 function stage() {
     document.getElementById("stage").innerHTML = stageCount + 1;
 }
- function lastStage() {
+export  function lastStage() {
     stageCount = 10;
 }

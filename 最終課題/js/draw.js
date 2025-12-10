@@ -1,4 +1,4 @@
-import { startLoop, stopLoop, clearX, stageCount } from "./finalAssignment.js";
+import { startLoop, stopLoop, clearX,lastStage, stageCount } from "./finalAssignment.js";
 import { allClearObjects } from "./collision.js";
 import { clearPlayer, initEvent } from "./playerMotion.js";
 import { clearSpider } from "./spider.js";
