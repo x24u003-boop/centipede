@@ -73,8 +73,18 @@ export async function loadImages(map) {
         startLoop(startButton, lastButton);
     });
     resetButton.addEventListener("click", function () {
+        end();
+        
+    });
+    lastButton.addEventListener("click", function () {
 
-        stopLoop(startButton, lastButton);
+        clearX();
+        lastStage();
+        startLoop(startButton, lastButton);
+    });
+})();
+function end(){
+    stopLoop(startButton, lastButton);
         if(stageCount>=10){
             addData("scores", {
                 name: prompt("あなたのニックネームは？"),
@@ -93,16 +103,8 @@ export async function loadImages(map) {
         clearDraw(0, 0, 800, 700);
         clearPlayer();
         allClearObjects();
-    });
-    lastButton.addEventListener("click", function () {
-
-        clearX();
-        lastStage();
-        startLoop(startButton, lastButton);
-    });
-})();
-
-
+}
+        
 import { db } from "./firebaseInit.js";
 
 
@@ -174,5 +176,6 @@ async function addData(path, data) {
     await set(newRef, data);
     console.log("追加完了:", newRef.key);
 }
+
 
 window.onload = startRanking;
