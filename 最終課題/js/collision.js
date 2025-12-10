@@ -90,7 +90,7 @@ export function collisionExecute(hits) {
             if (hitB instanceof Player) {
                 hitB.subHealth();
                 if (hitB.health == 0) {
-                    stopLoop(startButton, lastButton);
+                    end();
 
                     alert("gameover");
                 }
@@ -102,7 +102,7 @@ export function collisionExecute(hits) {
             } else if (hitA instanceof Player) {
                 hitA.subHealth();
                 if (hitA.health == 0) {
-                    stopLoop(startButton, lastButton);
+                    end();
 
                     alert("gameover");
                 }
@@ -388,4 +388,5 @@ function collisionBullet(newX, newY, oldX, oldY, box) {
     // tEnter <= tExit → 衝突
     return tEnter <= tExit && tEnter >= 0 && tEnter <= 1;
 }
+
 
