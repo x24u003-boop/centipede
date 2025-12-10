@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/finalAssignment.css">
+
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="660"></canvas>
+    <button id="startButton" disabled="true">Start</button>
+    <p id="pra">Score:<span id="score">0</span><br>
+        life:<span id="life">3</span><br>
+        stage:<span id="stage">1</span>
+    </p>
+    <button id="resetButton">もう一度</button>
+    <button id="lastButton" disabled="true">hardStage</button>
+    <p id="role">
+        操作方法：<br>
+        W:上<br>
+        A:左<br>
+        S:下<br>
+        D:右<br>
+        SPACE:弾を打つ
+    </p>
+    <div id="rankingNormal"></div>
+    <div id="rankingLast"></div>
+
+    <script type="module" src="js/firebaseInit.js"></script>
+    <script type="module" src="js/collision.js"></script>
+    <script type="module" src="js/draw.js"></script>
+    <script type="module" src="js/enemyMotion.js"></script>
+    <script type="module" src="js/finalAssignment.js"></script>
+    <script type="module" src="js/flea.js"></script>
+    <script type="module" src="js/mushroom.js"></script>
+    <script type="module" src="js/playerMotion.js"></script>
+    <script type="module" src="js/score.js"></script>
+    <script type="module" src="js/scorpion.js"></script>
+    <script type="module" src="js/spider.js"></script>
+    <script type="module" src="js/wall.js"></script>
+</body>
+
+</html>
